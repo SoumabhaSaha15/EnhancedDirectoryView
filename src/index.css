@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+:root {
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 0.75rem;
+  --depth: 1;
+}
+
+* {
+  @apply font-semibold text-base text-base-content! font-["Montserrat"] scroll-smooth;
+}
+
+body {
+  @apply bg-base-100 mx-[7%]! mb-[5%]!;
+}
+
+h1 {
+  @apply overflow-hidden text-2xl! text-accent-content! font-extrabold bg-accent px-1.5! py-1! m-1! mt-2! whitespace-nowrap block! rounded-box border-b-0!;
+}
+
+a:visited {
+  @apply link-accent!;
+}
+
+a:link {
+  @apply link-info!;
+}
+
+table tr:first-child th {
+  border: none;
+  @apply bg-accent! font-black text-center! py-1 px-1.5 text-accent-content!;
+}
+
+#nameColumnHeader {
+  border: none;
+  @apply bg-accent! font-black text-left! py-1 px-1.5 text-accent-content!;
+}
+
+table {
+  @apply rounded-box overflow-hidden border-collapse bg-base-200 table-auto! w-full!;
+}
+
+td {
+  @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden! wrap-break-word! p-2;
+}
+
+th {
+  @apply cursor-pointer bg-base-content;
+}
+
+table.icon-dir {
+  @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden! wrap-break-word!;
+}
+
+td.detailsColumn {
+  -webkit-padding-start: 0.5em !important;
+  @apply text-base-content! text-center! wrap-break-word! w-[30%]!;
+}
+
+a.icon {
+  -webkit-padding-start: 1.7em !important;
+  text-decoration: none;
+}
+
+a.icon:hover {
+  transition: 0.2s !important;
+  text-decoration: none !important;
+  @apply link-hover!;
+}
+
+tr:nth-child(even) {
+  @apply bg-base-200;
+}
+
+tr:nth-child(odd) {
+  @apply bg-base-300;
+}
+
+a.file {
+  background: var(--file-icon-url) left top no-repeat !important;
+  background-size: 26px 26px !important;
+}
+
+a.dir,
+a.up {
+  background: var(--folder-icon-url) left top no-repeat !important;
+  background-size: 26px 26px !important;
+}
+
+#parentDirText {
+  @apply text-base-content! text-base! font-bold;
+}
