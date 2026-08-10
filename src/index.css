@@ -6,14 +6,19 @@
 }
 
 :root {
-  --radius-selector: 0.75rem;
-  --radius-field: 0.75rem;
-  --radius-box: 0.75rem;
+  --radius-selector: 0;
+  --radius-field: 0;
+  --radius-box: 0;
   --depth: 1;
+  --noise: 1;
+}
+
+html {
+  @apply min-h-dvh;
 }
 
 * {
-  @apply font-semibold text-base text-base-content! font-["Montserrat"] scroll-smooth;
+  @apply font-semibold text-base text-base-content! font-["Montserrat"] scroll-smooth transition-all;
 }
 
 body {
@@ -21,7 +26,7 @@ body {
 }
 
 h1 {
-  @apply overflow-hidden text-2xl! text-accent-content! font-extrabold bg-accent px-1.5! py-1! m-1! mt-2! whitespace-nowrap block! rounded-box border-b-0!;
+  @apply overflow-hidden text-2xl! text-accent-content! font-extrabold bg-accent px-1.5! py-1! m-1! mt-2! whitespace-nowrap block! rounded-box border-b-0! shadow-xl;
 }
 
 a:visited {
@@ -34,12 +39,12 @@ a:link {
 
 table tr:first-child th {
   border: none;
-  @apply bg-accent! font-black text-center! py-1 px-1.5 text-accent-content!;
+  @apply bg-secondary! font-black text-center! py-1 px-1.5 text-secondary-content!;
 }
 
 #nameColumnHeader {
   border: none;
-  @apply bg-accent! font-black text-left! py-1 px-1.5 text-accent-content!;
+  @apply bg-primary! font-black text-left! py-1 px-1.5 text-primary-content!;
 }
 
 table {
@@ -75,11 +80,11 @@ a.icon:hover {
 }
 
 tr:nth-child(even) {
-  @apply bg-base-200;
+  @apply bg-base-200 hover:scale-95;
 }
 
 tr:nth-child(odd) {
-  @apply bg-base-300;
+  @apply bg-base-300 hover:scale-95;
 }
 
 a.file {
