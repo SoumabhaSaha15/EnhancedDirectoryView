@@ -5,6 +5,16 @@ import browser from "webextension-polyfill";
 const fileIconUrl = browser.runtime.getURL("file.svg");
 const folderIconUrl = browser.runtime.getURL("folder.svg");
 
+function manageDirectoryScope() {
+  const targetElement = document.documentElement;
+  if (document.contentType === 'text/html')
+    targetElement.id = "EnhancedDirectoryView";
+  else if (targetElement.id === "EnhancedDirectoryView")
+    targetElement.removeAttribute("id");
+}
+manageDirectoryScope(); // Run on initial load
+window.addEventListener("popstate", manageDirectoryScope);
+
 document.documentElement.style.setProperty("--file-icon-url", `url("${fileIconUrl}")`);
 document.documentElement.style.setProperty("--folder-icon-url", `url("${folderIconUrl}")`);
 // Get header element and trim the text content
@@ -32,5 +42,5 @@ try {
     }
   });
 } catch (e) {
-  // "permissions": [ "<all_urls>" ]
+  console.log(e);
 }
