@@ -19,7 +19,7 @@
         "main.ts"
       ],
       "matches": [
-        "file://*"
+        "file:///*"
       ]
     }
   ],
@@ -34,7 +34,7 @@
         "folder.svg"
       ],
       "matches": [
-        "file://*"
+        "<all_urls>"
       ]
     }
   ]

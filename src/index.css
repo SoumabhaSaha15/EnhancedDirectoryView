@@ -6,9 +6,9 @@
 }
 
 :root {
-  --radius-selector: 0.5rem;
-  --radius-field: 0.5rem;
-  --radius-box: 0.5rem;
+  --radius-selector: 0;
+  --radius-field: 0;
+  --radius-box: 0;
   --depth: 1;
   --noise: 1;
 }
@@ -17,15 +17,15 @@ html#EnhancedDirectoryView {
   @apply min-h-dvh;
 
   & * {
-    @apply font-semibold text-base text-base-content! font-["Montserrat"] scroll-smooth transition-all;
+    @apply font-semibold text-base text-base-content! font-["Consolas"] scroll-smooth transition-all;
   }
 
   body {
-    @apply bg-base-100 mx-[7%]! mb-[5%]!;
+    @apply bg-base-100 mx-2;
   }
 
   h1 {
-    @apply overflow-hidden text-2xl! text-accent-content! font-extrabold bg-accent px-1.5! py-1! m-1! mt-2! whitespace-nowrap block! rounded-box border-b-0! shadow-xl;
+    @apply overflow-hidden text-2xl! text-accent-content! font-extrabold bg-accent px-1.5! py-1! mt-2! whitespace-nowrap block! border-b-0! shadow-xl;
   }
 
   a:visited {
@@ -47,7 +47,7 @@ html#EnhancedDirectoryView {
   }
 
   table {
-    @apply table! table-md! rounded-box overflow-hidden border-collapse bg-base-200 table-auto! w-full!;
+    @apply table overflow-hidden border-collapse bg-base-200 table-auto! w-full!;
   }
 
   td {
@@ -79,22 +79,26 @@ html#EnhancedDirectoryView {
   }
 
   tr:nth-child(even) {
-    @apply bg-base-200 hover:scale-y-120;
+    @apply bg-base-200;
   }
 
   tr:nth-child(odd) {
-    @apply bg-base-300 hover:scale-y-120;
+    @apply bg-base-300;
+  }
+
+  tbody > tr:hover {
+    @apply h-12;
   }
 
   a.file {
     background: var(--file-icon-url) left top no-repeat !important;
-    background-size: 26px 26px !important;
+    background-size: 16px 16px !important;
   }
 
   a.dir,
   a.up {
     background: var(--folder-icon-url) left top no-repeat !important;
-    background-size: 26px 26px !important;
+    background-size: 20px 20px !important;
   }
 
   #parentDirText {

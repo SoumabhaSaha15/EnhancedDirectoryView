@@ -2,3 +2,5 @@ allowBuilds:
   esbuild: true
   sharp: true
   spawn-sync: true
+minimumReleaseAgeExclude:
+  - daisyui@5.7.19
