@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui" {
   themes:
-    light --default,
-    dark --prefersdark;
+    fantasy --default,
+    business --prefersdark;
 }
 
 :root {
@@ -17,7 +17,7 @@ html#EnhancedDirectoryView {
   @apply min-h-dvh;
 
   & * {
-    @apply font-semibold text-base text-base-content! font-["Consolas"] scroll-smooth transition-all;
+    @apply font-semibold text-base text-base-content! font-mono scroll-smooth transition-all;
   }
 
   body {
@@ -55,7 +55,7 @@ html#EnhancedDirectoryView {
   }
 
   th {
-    @apply cursor-pointer bg-base-content;
+    @apply cursor-pointer;
   }
 
   table.icon-dir {
