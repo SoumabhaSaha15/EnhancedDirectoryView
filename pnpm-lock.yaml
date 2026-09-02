@@ -12,11 +12,11 @@ importers:
         specifier: ^4.3.3
         version: 4.3.3(vite@8.2.2(@types/node@26.4.0)(jiti@2.7.0)(yaml@2.9.0))
       '@types/webextension-polyfill':
-        specifier: ^0.12.5
-        version: 0.12.5
+        specifier: ^0.12.6
+        version: 0.12.6
       daisyui:
-        specifier: ^5.7.25
-        version: 5.7.25
+        specifier: ^5.7.27
+        version: 5.7.27
       sharp-cli:
         specifier: ^6.1.0
         version: 6.1.0(@types/node@26.4.0)
@@ -458,8 +458,8 @@ packages:
   '@types/node@26.4.0':
     resolution: {integrity: sha512-faiGnoIrLH/V8cibOMEAZ8pMw6oXqSukl29ra4mN8GdaB2ZewzeaLj+INpV5N+Z1eKWzY+IzaIZH2EIR6YZRNQ==}
 
-  '@types/webextension-polyfill@0.12.5':
-    resolution: {integrity: sha512-uKSAv6LgcVdINmxXMKBuVIcg/2m5JZugoZO8x20g7j2bXJkPIl/lVGQcDlbV+aXAiTyXT2RA5U5mI4IGCDMQeg==}
+  '@types/webextension-polyfill@0.12.6':
+    resolution: {integrity: sha512-XTNQSGiQaipt1iocbpHSjYHd+Ujcya+K5H4H2uH7JwycReTFixoYqGWIKih2Ec072NuEW2lAyXRDYmlEx00+cw==}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     resolution: {integrity: sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==}
@@ -724,8 +724,8 @@ packages:
   cssom@0.5.0:
     resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
 
-  daisyui@5.7.25:
-    resolution: {integrity: sha512-lE5kR8FjHxUHiCb3/PAPuaNkv0MSm6B8GWd5x/l7SLDsH58IxYCiPG8wrcRgdZCI5q8jxpeA2Utx6O6X/kpLnw==}
+  daisyui@5.7.27:
+    resolution: {integrity: sha512-Je10yYK7UFJYyLSQrIxhFmpwX+86gXdNTnfNkA1jlev7j9oz3QrqioEQ6/0JYOvYPs5NYH4aaJ+X35/N80G/xg==}
 
   debounce@1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
@@ -1898,7 +1898,7 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
-  '@types/webextension-polyfill@0.12.5': {}
+  '@types/webextension-polyfill@0.12.6': {}
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
@@ -2100,7 +2100,7 @@ snapshots:
 
   cssom@0.5.0: {}
 
-  daisyui@5.7.25: {}
+  daisyui@5.7.27: {}
 
   debounce@1.2.1: {}
 

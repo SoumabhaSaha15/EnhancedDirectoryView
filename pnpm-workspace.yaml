@@ -3,5 +3,6 @@ allowBuilds:
   sharp: true
   spawn-sync: true
 minimumReleaseAgeExclude:
-  - daisyui@5.7.19 || 5.7.20 || 5.7.25
+  - daisyui@5.7.19 || 5.7.20 || 5.7.25 || 5.7.27
   - sharp-cli@6.1.0
+  - '@types/webextension-polyfill@0.12.6'

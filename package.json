@@ -15,8 +15,8 @@
     "gen-icons": "pnpm run icon:16 && pnpm run icon:32 && pnpm run icon:48 && pnpm run icon:96 && pnpm run icon:128"
   },
   "devDependencies": {
-    "@types/webextension-polyfill": "^0.12.5",
-    "daisyui": "^5.7.25",
+    "@types/webextension-polyfill": "^0.12.6",
+    "daisyui": "^5.7.27",
     "typescript": "~7.0.2",
     "vite": "^8.2.2",
     "sharp-cli": "^6.1.0",
