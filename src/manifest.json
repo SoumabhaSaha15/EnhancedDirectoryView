@@ -25,7 +25,7 @@
   ],
   "author": "soumabhasaha1509+github@gmail.com",
   "host_permissions": [
-    "<all_urls>"
+    "file:///*"
   ],
   "web_accessible_resources": [
     {

@@ -37,7 +37,7 @@ html#EnhancedDirectoryView {
   }
 
   h1 {
-    @apply overflow-hidden text-2xl! rounded-box! text-accent-content! font-bold bg-accent px-1.5! py-1! mt-2! whitespace-nowrap block! border-b-0! shadow-xl;
+    @apply text-2xl! rounded-box! text-accent-content! font-bold bg-accent px-1.5! py-1! mt-2! w-full! truncate! block! border-b-0! shadow-xl;
   }
 
   a:visited {
@@ -63,7 +63,7 @@ html#EnhancedDirectoryView {
   }
 
   td {
-    @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden! wrap-break-word! p-2;
+    @apply w-[70%]! max-w-[70%]! truncate! p-2;
   }
 
   th {
@@ -80,14 +80,12 @@ html#EnhancedDirectoryView {
   }
 
   a.icon {
-    -webkit-padding-start: 1.7em !important;
-    text-decoration: none;
+    @apply inline-block max-w-full truncate align-bottom ps-[1.7em]! no-underline!;
   }
 
   a.icon:hover {
     transition: 0.2s !important;
-    text-decoration: none !important;
-    @apply link-hover!;
+    @apply link-hover! no-underline!;
   }
 
   tr:nth-child(even) {
@@ -103,14 +101,12 @@ html#EnhancedDirectoryView {
   }
 
   a.file {
-    background: var(--file-icon-url) left top no-repeat !important;
-    background-size: 16px 16px !important;
+    @apply [background-image:var(--file-icon-url)]! bg-top-left bg-no-repeat bg-size-[20px_20px]!;
   }
 
   a.dir,
   a.up {
-    background: var(--folder-icon-url) left top no-repeat !important;
-    background-size: 20px 20px !important;
+    @apply [background-image:var(--folder-icon-url)]! bg-top-left bg-no-repeat bg-size-[20px_20px]!;
   }
 
   #parentDirText {

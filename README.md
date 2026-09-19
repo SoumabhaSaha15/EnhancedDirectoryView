@@ -2,4 +2,4 @@
 
 > ## Tailwind + DaisyUI based project that overrides the native styles of existing browsers folder view
 
-![preview](/preview.png)
+![preview](/screenshots/preview.png)

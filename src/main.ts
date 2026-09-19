@@ -1,46 +1,55 @@
+
 "use strict";
 
 import browser from "webextension-polyfill";
 
+const HEADER_MAX_CHARS = 65;
+const LINK_MAX_CHARS = 60;
+
 const fileIconUrl = browser.runtime.getURL("file.svg");
 const folderIconUrl = browser.runtime.getURL("folder.svg");
 
-function manageDirectoryScope() {
-  const targetElement = document.documentElement;
-  if (document.contentType === 'text/html')
-    targetElement.id = "EnhancedDirectoryView";
-  else if (targetElement.id === "EnhancedDirectoryView")
-    targetElement.removeAttribute("id");
+function isDirectoryListing(): boolean {
+  // contentType alone is also true for any local .html file;
+  // #header only exists on Chrome's generated listing page.
+  return (
+    document.contentType === "text/html" &&
+    document.getElementById("header") !== null
+  );
 }
-manageDirectoryScope(); // Run on initial load
-window.addEventListener("popstate", manageDirectoryScope);
 
-document.documentElement.style.setProperty("--file-icon-url", `url("${fileIconUrl}")`);
-document.documentElement.style.setProperty("--folder-icon-url", `url("${folderIconUrl}")`);
-// Get header element and trim the text content
-const header = document.getElementById("header")!;
-try {
-  header.textContent = header.textContent.trim();
-  // Set the header text content to ~ if it is empty
-  if (header.textContent === "") {
-    header.textContent = "~";
+function truncate(text: string, max: number): string {
+  const trimmed = text.trim();
+  return trimmed.length <= max ? trimmed : trimmed.slice(0, max) + "…";
+}
+
+function enhanceDirectoryView(): void {
+  const root = document.documentElement;
+
+  if (!isDirectoryListing()) {
+    if (root.id === "EnhancedDirectoryView") root.removeAttribute("id");
+    return; // not our page — do nothing, touch nothing
   }
 
-  // Set the width of the header to 100% in order to fill the space
-  header.style.width = "100%";
+  root.id = "EnhancedDirectoryView";
+  root.style.setProperty("--file-icon-url", `url("${fileIconUrl}")`);
+  root.style.setProperty("--folder-icon-url", `url("${folderIconUrl}")`);
 
-  // Set the length of the header to 65 characters
-  if (header.textContent.length > 65) {
-    header.textContent = header.textContent.slice(0, 65) + "...";
-  }
+  const header = document.getElementById("header");
+  if (!header) return;
 
-  // Shorten the text content of links that are too long
-  const links = document.querySelectorAll("a");
-  links.forEach((link) => {
-    if (link.textContent.length > 60) {
-      link.textContent = link.textContent.slice(0, 60) + "...";
+  header.textContent =
+    header.textContent.trim() === ""
+      ? "~"
+      : truncate(header.textContent, HEADER_MAX_CHARS);
+  // header.style.width = "100%";
+
+  document.querySelectorAll("a").forEach((link) => {
+    if ((link.textContent?.length ?? 0) > LINK_MAX_CHARS) {
+      link.textContent = truncate(link.textContent!, LINK_MAX_CHARS);
     }
   });
-} catch (e) {
-  console.log(e);
 }
+
+enhanceDirectoryView();
+window.addEventListener("popstate", enhanceDirectoryView);

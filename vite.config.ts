@@ -2,7 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import webExtension from "vite-plugin-web-extension";
-
+// "<all_urls>"
 export default defineConfig(() => {
   return {
     root: "src",
