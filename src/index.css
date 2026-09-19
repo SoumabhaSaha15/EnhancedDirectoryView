@@ -71,7 +71,7 @@ html#EnhancedDirectoryView {
   }
 
   table.icon-dir {
-    @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden! wrap-break-word!;
+    @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden!;
   }
 
   td.detailsColumn {
