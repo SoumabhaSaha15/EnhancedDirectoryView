@@ -4,7 +4,6 @@
     light --default,
     dark --prefersdark;
 }
-
 :root {
   --radius-selector: 0rem;
   --radius-field: 0rem;
@@ -17,19 +16,7 @@ html#EnhancedDirectoryView {
   @apply min-h-dvh;
 
   & * {
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      "Open Sans",
-      "Helvetica Neue",
-      sans-serif;
-    @apply font-semibold text-base text-base-content! scroll-smooth transition-all;
+    @apply font-semibold font-sans text-base text-base-content! scroll-smooth transition-all;
   }
 
   body {
@@ -43,7 +30,6 @@ html#EnhancedDirectoryView {
   a:visited {
     @apply link-accent!;
   }
-
   a:link {
     @apply link-info!;
   }
@@ -52,28 +38,22 @@ html#EnhancedDirectoryView {
     border: none;
     @apply bg-secondary! font-bold text-center! py-1 px-1.5 text-secondary-content!;
   }
-
   #nameColumnHeader {
     border: none;
     @apply bg-primary! font-bold text-left! py-1 px-1.5 text-primary-content!;
   }
-
   table {
     @apply table overflow-hidden border-collapse bg-base-200 table-auto! w-full!;
   }
-
   td {
     @apply w-[70%]! max-w-[70%]! truncate! p-2;
   }
-
   th {
     @apply cursor-pointer;
   }
-
   table.icon-dir {
     @apply w-[70%]! max-w-[70%]! whitespace-nowrap! overflow-hidden!;
   }
-
   td.detailsColumn {
     -webkit-padding-start: 0.5em !important;
     @apply text-base-content! text-center! wrap-break-word! w-[30%]!;
@@ -82,7 +62,6 @@ html#EnhancedDirectoryView {
   a.icon {
     @apply inline-block max-w-full truncate align-bottom ps-[1.7em]! no-underline!;
   }
-
   a.icon:hover {
     transition: 0.2s !important;
     @apply link-hover! no-underline!;
@@ -91,11 +70,9 @@ html#EnhancedDirectoryView {
   tr:nth-child(even) {
     @apply bg-base-200;
   }
-
   tr:nth-child(odd) {
     @apply bg-base-300;
   }
-
   tbody > tr:hover {
     @apply h-12;
   }
@@ -103,7 +80,6 @@ html#EnhancedDirectoryView {
   a.file {
     @apply [background-image:var(--file-icon-url)]! bg-top-left bg-no-repeat bg-size-[20px_20px]!;
   }
-
   a.dir,
   a.up {
     @apply [background-image:var(--folder-icon-url)]! bg-top-left bg-no-repeat bg-size-[20px_20px]!;

@@ -6,14 +6,14 @@ import webExtension from "vite-plugin-web-extension";
 export default defineConfig(() => {
   return {
     root: "src",
-    publicDir: path.resolve(import.meta.dirname, "public"),
+    publicDir: path.resolve("public"),
     resolve: {
       alias: {
-        "@": path.resolve(import.meta.dirname, "./src"),
+        "@": path.resolve("./src"),
       },
     },
     build: {
-      outDir: path.resolve(import.meta.dirname, "dist"),
+      outDir: path.resolve("dist"),
       emptyOutDir: true,
     },
     plugins: [
