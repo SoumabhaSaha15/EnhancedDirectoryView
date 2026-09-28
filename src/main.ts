@@ -5,8 +5,7 @@ const isDirectoryListing: () => boolean = () => {
   const header = document.getElementById('header');
   return !!header && header.tagName === 'H1' && header.textContent.startsWith('Index of');
 }
-
-const enhanceDirectoryView: () => void = () => {
+(() => {
   if (isDirectoryListing()) {
     const fileIconUrl = browser.runtime.getURL("file.svg"),
       folderIconUrl = browser.runtime.getURL("folder.svg"),
@@ -20,7 +19,4 @@ const enhanceDirectoryView: () => void = () => {
     link.href = folderIconUrl;
     document.head.appendChild(link);
   }
-}
-
-enhanceDirectoryView();
-window.addEventListener("popstate", enhanceDirectoryView);
+})();
