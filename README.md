@@ -72,7 +72,7 @@ Then load the generated `dist/` folder as described above.
 
 > **Note on `index.css`:** the heavy use of `!` (important) utilities is deliberate — the extension must override the browser's own user-agent styles for the directory listing, and specificity battles are not worth fighting here.
 
-> ### You can change the theme with total 35 different themes. You have to modify `index.css` plugin and root scopes.  
+> ### You can change the theme with total **35 different themes** provided by daisy-UI if you rebuild the stylesheet. You have to modify `index.css` plugin and root scopes.  
 
 ## Credits
 
