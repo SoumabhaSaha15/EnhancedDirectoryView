@@ -20,7 +20,8 @@
       ],
       "matches": [
         "file:///*"
-      ]
+      ],
+      "run_at":"document_idle"
     }
   ],
   "author": "soumabhasaha1509+github@gmail.com",

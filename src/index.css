@@ -5,9 +5,9 @@
     dark --prefersdark;
 }
 :root {
-  --radius-selector: 0rem;
-  --radius-field: 0rem;
-  --radius-box: 0rem;
+  --radius-selector: 0.4rem;
+  --radius-field: 0.4rem;
+  --radius-box: 0.4rem;
   --depth: 1;
   --noise: 1;
 }
