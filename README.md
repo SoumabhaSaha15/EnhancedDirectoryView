@@ -13,7 +13,7 @@ When you open a local folder in your browser (`file:///D:/projects/...`), you ge
 - **Automatic light and dark themes** — follows your system preference via DaisyUI's `prefers-color-scheme` support
 - **Sensible typography and spacing** — truncated long filenames, readable columns, smooth transitions
 - **A proper favicon** — the page tab shows a folder icon instead of a blank file icon
-- **Native behaviour preserved** — Firefox's column sorting still works (click the headers to sort)
+- **Native behaviour preserved** — Column sorting still works (click the headers to sort)
 
 ## How it works
 
@@ -25,13 +25,13 @@ The extension is intentionally minimal — one content script and one stylesheet
 
 ## Installation
 
-### From the release (temporary install in Firefox)
+### From the release
 
 1. Download `EnhancedDirectoryView-1.0.0.zip` from the [`release/`](./release) folder (or the GitHub release) and unzip it.
-2. Open `about:debugging#/runtime/this-firefox` in Firefox.
-3. Click **Load Temporary Add-on…** and select the `manifest.json` inside the unzipped `dist` folder.
+2. Open `chrome://extensions/` and turn on Developer mode.
+3. Click **Load unpacked** and select the unzipped `dist` folder.
 
-> Temporary add-ons are removed when Firefox restarts — Firefox requires signed extensions for permanent installs of self-built add-ons.
+> Format `manifest.json` if it fails to load.
 
 ### From source
 
