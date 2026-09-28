@@ -1,4 +1,4 @@
-> # ![icon](./public/icon/24.png) EnhancedDirectoryView
+> # ![icon](./public/md-icon.png) EnhancedDirectoryView
 
 > ## Tailwind + DaisyUI based project that overrides the native styles of existing browsers folder view
 
