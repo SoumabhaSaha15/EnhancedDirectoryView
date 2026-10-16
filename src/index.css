@@ -5,11 +5,11 @@
     dark --prefersdark;
 }
 :root {
-  --radius-selector: 0.4rem;
-  --radius-field: 0.4rem;
-  --radius-box: 0.4rem;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
   --depth: 1;
-  --noise: 1;
+  --noise: 0;
 }
 
 html#EnhancedDirectoryView {
